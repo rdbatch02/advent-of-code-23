@@ -47,43 +47,6 @@ fun main() {
         return null
     }
 
-//    fun replaceStrings(input: String): String {
-//        var output = input
-//        val numberStrings = mapOf(
-//            "one" to "1",
-//            "two" to "2",
-//            "three" to "3",
-//            "four" to "4",
-//            "five" to "5",
-//            "six" to "6",
-//            "seven" to "7",
-//            "eight" to "8",
-//            "nine" to "9"
-//        )
-//
-//        do {
-//            val indexOfValues = mapOf(
-//                "one" to 0,
-//                "two" to 0,
-//                "three" to 0,
-//                "four" to 0,
-//                "five" to 0,
-//                "six" to 0,
-//                "seven" to 0,
-//                "eight" to 0,
-//                "nine" to 0
-//            )
-//
-//            val foundValues = indexOfValues.mapValues { output.indexOf(it.key) }.filterValues { it > -1 }
-//            if (foundValues.isNotEmpty()) {
-//                val firstFind = foundValues.minBy { it.value }
-//                output = output.replaceFirst(firstFind.key, numberStrings[firstFind.key]!!)
-//            }
-//        } while (foundValues.isNotEmpty())
-//
-//        return output
-//    }
-
     fun part1(input: List<String>): Int {
         val filteredInputs = input.map { line -> line.toList().mapNotNull { it.toString().toIntOrNull() } }
         val calibrationValues = filteredInputs.map { listToInt(listOf(it.first, it.last)) }
